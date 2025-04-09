@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏟️ Plataforma de Visualização de Apostas Esportivas
 
-## Getting Started
+Este projeto é uma plataforma de apostas esportivas construída com **Next.js**, **TypeScript**, e foco em performance, UX e componentização moderna.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Tecnologias Utilizadas
+
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [NextAuth.js](https://next-auth.js.org/) — Autenticação via GitHub
+- [Vercel](https://vercel.com/) — Deploy contínuo
+
+---
+
+## 🧩 Funcionalidades
+
+- ✅ Login com GitHub
+- ✅ Proteção de rotas
+- ✅ Redirecionamento automático para `/login` caso não autenticado
+- ✅ Estrutura pronta para usar componentes reutilizáveis
+- ✅ Deploy automático via Vercel
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+app/
+├── api/
+│ └── auth/ # API Routes do NextAuth
+├── login/ # Página de login
+├── home/ # Página principal após login
+├── odd/ # Página de visualização detalhada da odd
+├── layout.tsx # Layout global da aplicação
+└── page.tsx # Página inicial ou redirecionamento
+
+components/
+├── home/ # Componentes específicos da Home
+├── odd/ # (opcional) Componentes específicos da Odd
+├── shared/ # Componentes reutilizáveis entre páginas
+└── ui/ # Componentes de UI genéricos (ex: botões, cards - vindos do shadcn)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Autenticação com GitHub
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para funcionar localmente, crie um arquivo `.env` com as seguintes variáveis:
 
-## Learn More
+```env
+GITHUB_ID=seu_client_id
+GITHUB_SECRET=seu_client_secret
+NEXTAUTH_SECRET=algum_valor_seguro
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Como rodar localmente
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Instale as dependências
 
-## Deploy on Vercel
+```
+npm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Rode o servidor de desenvolvimento
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npm run dev
+```
+
+Acesse http://localhost:3000
+
+---
+
+## 🧱 Em andamento
+
+- Instalar e configurar o shadcn/ui
+
+- Criar componente de card de odd
+
+- Adicionar drag & drop para categorias favoritas
+
+- Implementar detalhamento de odds na rota /odd/[id]
+
+- Testes automatizados com Jest/Testing Library
+
+- Configuração de Docker e docker-compose
+
+- Otimização de SEO com metadata e tags estruturadas
+
+---
+
+## 📦 Deploy
+
+O projeto está publicado na Vercel com deploy automático a cada push na branch main.
+
+## 🧠 Autor
+
+João Victor Fausto Souza
