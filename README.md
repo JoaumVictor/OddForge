@@ -1,4 +1,6 @@
-# 🏟️ Plataforma de Visualização de Apostas Esportivas
+![Logotipo da OddForge](public/logotipo.png)
+
+# 🏟️ Plataforma de Visualização de Apostas Esportivas Odd Forge
 
 Este projeto é uma plataforma de apostas esportivas construída com **Next.js**, **TypeScript**, e foco em performance, UX e componentização moderna.
 
