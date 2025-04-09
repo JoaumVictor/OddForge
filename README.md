@@ -1,4 +1,4 @@
-![Logotipo da OddForge](public/logotipo.png)
+![Logotipo da OddForge](public/images/logotipo.png)
 
 # 🏟️ Plataforma de Visualização de Apostas Esportivas Odd Forge
 
@@ -37,6 +37,7 @@ app/
 ├── odd/ # Página de visualização detalhada da odd
 ├── layout.tsx # Layout global da aplicação
 └── page.tsx # Página inicial ou redirecionamento
+├── not-found.tsx # página 404
 
 components/
 ├── home/ # Componentes específicos da Home

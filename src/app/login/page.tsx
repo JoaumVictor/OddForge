@@ -1,16 +1,24 @@
 "use client";
 
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function LoginPage() {
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/");
+    }
+  }, [status, router]);
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       {session ? (
         <>
-          <p>Bem-vindo, {session.user?.name}</p>
-          <button onClick={() => signOut()}>Sair</button>
+          <p>Bem-vindo, {session.user?.name}, estamos te redirecionando...</p>
         </>
       ) : (
         <button onClick={() => signIn("github")}>Entrar com GitHub</button>

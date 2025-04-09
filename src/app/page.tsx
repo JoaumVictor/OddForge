@@ -1,6 +1,8 @@
-import { authOptions } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { authOptions } from "@/lib/authOptions";
+
+import Header from "@/components/shared/header/header";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -9,5 +11,10 @@ export default async function Home() {
     redirect("/login");
   }
 
-  return <div>Home protegida</div>;
+  return (
+    <div className="w-full h-screen flex items-center justify-start flex-col">
+      <Header />
+      <p>Home protegida</p>
+    </div>
+  );
 }
