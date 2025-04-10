@@ -15,7 +15,7 @@ export default function LoginPage() {
   }, [status, router]);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen bg-black">
       {session ? (
         <>
           <p>Bem-vindo, {session.user?.name}, estamos te redirecionando...</p>

@@ -24,7 +24,7 @@ export default function HoverMenu({
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
         onMouseEnter={() => setOpen(true)}
-        className="hover:text-zinc-400 text-white transition-colors cursor-pointer px-4 h-[70px]"
+        className="hover:text-zinc-400 text-white transition-colors cursor-pointer px-4 h-[70px] focus:outline-none focus:ring-0"
       >
         {label}
       </PopoverTrigger>

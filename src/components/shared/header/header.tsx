@@ -1,5 +1,6 @@
 "use client";
 
+import { signOut } from "next-auth/react";
 import HoverMenu from "@/components/ui/hover-menu";
 import Image from "next/image";
 import { GoPersonFill } from "react-icons/go";
@@ -24,6 +25,7 @@ import {
 import { FaUserNinja } from "react-icons/fa";
 import { DynamicMenubar } from "@/components/ui/dynamic-menubar";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const placarItems = [
   {
@@ -127,6 +129,8 @@ const esportesItems = [
 ];
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <header className="flex items-center justify-between p-1 bg-black shadow-md w-full mb-10 px-[10%]">
       <Link href="/" className="flex items-center gap-2">
@@ -152,12 +156,15 @@ export default function Header() {
           {
             label: "Perfil",
             type: "content",
-            exec: () => {},
+            exec: () => router.push("/profile"),
           },
           {
-            label: "Config",
+            type: "separator",
+          },
+          {
+            label: "Deslogar",
             type: "content",
-            exec: () => {},
+            exec: () => signOut({ callbackUrl: "/login" }),
           },
         ]}
       />
