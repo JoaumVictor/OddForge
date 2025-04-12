@@ -1,0 +1,37 @@
+{
+  "homepage": {
+    "header": {
+      "options": {
+        "option1": {
+          "title": "Placar",
+          "items": {
+            "brasileirao": "Brasileirão",
+            "copaDoBrasil": "Copa do Brasil",
+            "ligaDosCampeoes": "Liga dos Campeões",
+            "copaLibertadores": "Copa Libertadores",
+            "premierLeague": "Premier League",
+            "laLiga": "La Liga",
+            "futebol": "Futebol",
+            "basquete": "Basquete",
+            "eSports": "e-Sports"
+          }
+        },
+        "option2": {
+          "title": "Esportes",
+          "items": {
+            "futebol": "Futebol",
+            "basquete": "Basquete",
+            "tenis": "Tênis",
+            "futebolAmericano": "Futebol Americano",
+            "beisebol": "Beisebol",
+            "hoqueiNoGelo": "Hóquei no Gelo",
+            "criquete": "Críquete",
+            "boxe": "Boxe",
+            "mma": "MMA",
+            "eSports": "eSports"
+          }
+        }
+      }
+    }
+  }
+}
